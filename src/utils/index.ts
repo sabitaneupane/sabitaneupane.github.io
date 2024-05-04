@@ -2,29 +2,6 @@ export const siteInfo = {
   authorName: 'Sabita Neupane',
 }
 
-export const menuLinks = [
-  {
-    text: 'About Me',
-    url: '',
-  },
-  {
-    text: 'Academic Profile',
-    url: '',
-  },
-  {
-    text: 'Professional Profile',
-    url: '',
-  },
-  {
-    text: 'Tech Community Profile',
-    url: '',
-  },
-  {
-    text: 'Content',
-    url: '',
-  },
-]
-
 export const socialMediaInfo = [
   {
     name: 'Facebook',

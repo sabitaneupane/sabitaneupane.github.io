@@ -1,4 +1,4 @@
-import { siteInfo } from '../../utils'
+import AppRouter from '../../router'
 import FooterComponent from '../footer'
 import HeaderComponent from '../header'
 
@@ -10,7 +10,7 @@ const AppComponent = () => {
       </div>
       <div className="body-container">
         <div className="body-content">
-          <h1 className="main-title">{siteInfo.authorName}'s Personal site</h1>
+          <AppRouter />
         </div>
       </div>
       <div className="footer-container">

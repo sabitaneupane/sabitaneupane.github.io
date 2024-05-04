@@ -2,9 +2,9 @@ import { siteInfo, socialMediaInfo } from '../../utils'
 
 const FooterComponent = () => {
   const socialMediaContent = () => {
-    return socialMediaInfo.map((sm: any) => {
+    return socialMediaInfo.map((sm: any, index: number) => {
       return (
-        <a href={sm.url} target="_blank" className="px-1 py-2">
+        <a href={sm.url} target="_blank" className="px-1 py-2" key={index}>
           <img src={sm.image} alt={sm.name} />
         </a>
       )
