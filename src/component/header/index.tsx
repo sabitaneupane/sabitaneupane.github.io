@@ -1,6 +1,7 @@
 import { Container, Nav, Navbar } from 'react-bootstrap'
 import { siteInfo } from '../../utils'
 import NavComponent from '../nav'
+import logo from '../../assets/sabitaneupane-logo.png'
 
 const HeaderComponent = () => {
   const collapsibleNavbar = () => {
@@ -17,10 +18,18 @@ const HeaderComponent = () => {
       <Navbar
         collapseOnSelect
         expand="lg"
-        className="bg-body-tertiary page-navbar"
+        className="bg-body-tertiary page-navbar p-3"
       >
         <Container>
-          <Navbar.Brand href="/">{siteInfo.authorName}</Navbar.Brand>
+          <Navbar.Brand href="/">
+            <img
+              src={logo}
+              alt="Sabita Neupane Logo"
+              width="26"
+              className="mx-1 logo-image"
+            />
+            <span className="mt-1">{siteInfo.authorName}</span>
+          </Navbar.Brand>
           <Navbar.Toggle aria-controls="responsive-navbar-nav" />
           {collapsibleNavbar()}
         </Container>

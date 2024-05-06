@@ -5,6 +5,7 @@ import { TechCommunityPage } from '../component/pages/tech-community'
 import { ContentPage } from '../component/pages/content'
 import { RouterProvider } from 'react-router-dom'
 import { createBrowserRouter } from 'react-router-dom'
+import { NewsPage } from '../component/pages/news'
 
 export const menuLinks = [
   {
@@ -13,25 +14,30 @@ export const menuLinks = [
     element: <AboutPage />,
   },
   {
-    id: 'Academic Profile',
+    id: 'Academic',
     path: '/academic',
     element: <AcademicPage />,
   },
   {
-    id: 'Professional Profile',
+    id: 'Professional',
     path: '/professional',
     element: <ProfessionalPage />,
   },
   {
-    id: 'Tech Community Profile',
+    id: 'Tech Community',
     path: '/tech-community',
     element: <TechCommunityPage />,
   },
-  {
-    id: 'Content',
-    path: '/content',
-    element: <ContentPage />,
-  },
+  // {
+  //   id: 'Content',
+  //   path: '/content',
+  //   element: <ContentPage />,
+  // },
+  // {
+  //   id: 'News',
+  //   path: '/news',
+  //   element: <NewsPage />,
+  // },
 ]
 const router = createBrowserRouter(menuLinks)
 
