@@ -2,10 +2,10 @@ import { AboutPage } from '../component/pages/about'
 import { AcademicPage } from '../component/pages/academic'
 import { ProfessionalPage } from '../component/pages/professional'
 import { TechCommunityPage } from '../component/pages/tech-community'
-import { ContentPage } from '../component/pages/content'
+// import { ContentPage } from '../component/pages/content'
+// import { NewsPage } from '../component/pages/news'
 import { RouterProvider } from 'react-router-dom'
 import { createBrowserRouter } from 'react-router-dom'
-import { NewsPage } from '../component/pages/news'
 
 export const menuLinks = [
   {
