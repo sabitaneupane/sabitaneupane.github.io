@@ -1,6 +1,8 @@
 export const ProfessionalPage = () => {
   return (
     <div>
+      <div id="professional"></div>
+
       <h2 className="page-title">Professional Profile</h2> 
       <div>
         <h3 className="my-4 pt-4">Professional Experience</h3>

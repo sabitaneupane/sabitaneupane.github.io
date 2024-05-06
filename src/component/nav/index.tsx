@@ -1,14 +1,14 @@
-import { Nav, NavLink } from 'react-bootstrap'
-import { menuLinks } from '../../router'
+import { Nav } from 'react-bootstrap'
+import { pageSections } from '../app'
 
 const NavComponent = () => {
   return (
     <Nav>
-      {menuLinks.map((m: any, index: number) => {
+      {pageSections.map((m: any, index: number) => {
         return (
-          <NavLink className="px-3" href={m.path} key={index}>
+          <Nav.Link className="px-3" href={m.path} key={index}>
             {m.id}
-          </NavLink>
+          </Nav.Link>
         )
       })}
     </Nav>

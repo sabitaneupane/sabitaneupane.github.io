@@ -23,26 +23,26 @@
   }
 }
 
-
-.logo-image{
+.logo-image {
   margin-top: -3px;
 }
 
-.author-image{
+.author-image {
   text-align: center;
 }
 
-.page-title{
+.page-title {
   text-align: center;
-  color: #226D93;
-  margin: 30px 0px 50px;
+  color: #226d93;
+  // margin: 50px 0px 30px;
+  border-bottom: 1px solid #efefef;
 }
 
 @media (max-width: 991px) {
   .body-container {
     padding: 80px 30px 20px 30px;
   }
-  .author-image{
+  .author-image {
     padding: 20px;
   }
 }
@@ -51,7 +51,14 @@
   .body-container {
     padding: 100px 20px 10px 20px;
   }
-  .author-image{
+  .author-image {
     padding: 20px;
   }
+}
+
+#about-me,
+#academic,
+#professional,
+#tech-community {
+  height: 80px;
 }

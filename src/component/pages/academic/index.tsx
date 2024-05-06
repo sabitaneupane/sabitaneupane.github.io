@@ -1,6 +1,7 @@
 export const AcademicPage = () => {
   return (
     <div>
+      <div id="academic"></div>
       <h2 className="page-title">Academic Profile</h2>
  
       <div>

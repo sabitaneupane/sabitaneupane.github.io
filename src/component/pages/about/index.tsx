@@ -11,7 +11,8 @@ export const AboutPage = () => {
 
   return (
     <div>
-      <h2 className="page-title">About Page</h2>
+      <div id="about-me"></div>
+      <h2 className="page-title">About Me</h2>
 
       <Row>
         <Col md={8} xs={12}>
@@ -37,7 +38,12 @@ export const AboutPage = () => {
           </div>
         </Col>
         <Col md={4} xs={12}>
-          <img src={authorImage} alt="Sabita Neupane Image" width="300" className='author-image'/>
+          <img
+            src={authorImage}
+            alt="Sabita Neupane Image"
+            width="300"
+            className="author-image"
+          />
           <p className="my-2 py-4"></p>
         </Col>
       </Row>

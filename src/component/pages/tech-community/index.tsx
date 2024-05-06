@@ -1,6 +1,7 @@
 export const TechCommunityPage = () => {
   return (
     <div>
+      <div id="tech-community"></div>
       <h2 className="page-title">Tech Community Profile</h2>
       <div>
         <h3 className="my-4 pt-4">Volunteer Experience</h3>
