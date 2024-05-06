@@ -1,46 +1,57 @@
-:root {
-  font-family: Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;
-  line-height: 1.5;
-  font-weight: 400;
-
-  color-scheme: light dark;
-  color: rgba(255, 255, 255, 0.87);
-  background-color: #242424;
-
-  font-synthesis: none;
-  text-rendering: optimizeLegibility;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+.header-container {
+  position: fixed;
+  width: 100%;
 }
 
-body {
-  margin: 0;
+.body-container {
+  margin: auto;
   display: flex;
   min-width: 320px;
-  min-height: 100vh;
+  padding: 100px 200px 20px 200px;
 }
 
-@media (prefers-color-scheme: light) {
-  :root {
-    color: #213547;
-    background-color: #ffffff;
-  }
-  a:hover {
-    color: #747bff;
-  }
-  button {
-    background-color: #f9f9f9;
+.footer-container {
+  .footer-content {
+    text-align: center;
+    background-color: #f8f9fa;
+
+    .copyright-info-content {
+      p {
+        font-size: 12px;
+      }
+    }
   }
 }
 
-#root {
-  max-width: 1280px;
-  margin: 0 auto;
-  padding: 2rem;
+
+.logo-image{
+  margin-top: -3px;
+}
+
+.author-image{
   text-align: center;
 }
 
-.main-title {
-  color: black;
-  font-size: 24px;
+.page-title{
+  text-align: center;
+  color: #226D93;
+  margin: 30px 0px 50px;
+}
+
+@media (max-width: 991px) {
+  .body-container {
+    padding: 80px 30px 20px 30px;
+  }
+  .author-image{
+    padding: 20px;
+  }
+}
+
+@media (max-width: 575px) {
+  .body-container {
+    padding: 100px 20px 10px 20px;
+  }
+  .author-image{
+    padding: 20px;
+  }
 }
