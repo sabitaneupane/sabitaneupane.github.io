@@ -43,17 +43,6 @@ export const AcademicPage = () => {
           </ul>
         </ul>
       </div>
-
-      <div>
-        <h3 className="my-4 pt-4">Research Interest</h3>
-        <div>
-          <ul>
-            <li>Software Engineering</li>
-            <li>Software Testing</li>
-            <li>Web and Mobile Application</li>
-          </ul>
-        </div>
-      </div>
     </div>
   )
 }

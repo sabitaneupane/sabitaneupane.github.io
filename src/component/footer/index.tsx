@@ -3,6 +3,9 @@ import { siteInfo, socialMediaInfo } from '../../utils'
 const FooterComponent = () => {
   const socialMediaContent = () => {
     return socialMediaInfo.map((sm: any, index: number) => {
+      if (!sm.featureFlag) {
+        return
+      }
       return (
         <a href={sm.url} target="_blank" className="px-1 py-2" key={index}>
           <img src={sm.image} alt={sm.name} />
@@ -19,7 +22,7 @@ const FooterComponent = () => {
 
   return (
     <div className="footer-content">
-      <div className="social-media-content py-4"> {socialMediaContent()}</div>
+      <div id="contact-me" className="social-media-content py-4"> {socialMediaContent()}</div>
       <div className="copyright-info-content pb-2"> {copyrightContent()} </div>
     </div>
   )

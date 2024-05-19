@@ -36,6 +36,15 @@ export const AboutPage = () => {
             an interest in the IT sector and also to accelerate the growth of
             innovative girls entering the tech industry.
           </div>
+
+          <div>
+            <h4 className="my-4 pt-4">Research Interest</h4>
+            <ul>
+              <li>Software Engineering</li>
+              <li>Software Testing</li>
+              <li>Web and Mobile Application</li>
+            </ul>
+          </div>
         </Col>
         <Col md={4} xs={12}>
           <img
