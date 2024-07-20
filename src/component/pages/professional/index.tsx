@@ -1,9 +1,11 @@
+import { skillsAndExperties } from '../../../utils/skills'
+
 export const ProfessionalPage = () => {
   return (
     <div>
       <div id="professional"></div>
 
-      <h2 className="page-title">Professional Profile</h2> 
+      <h2 className="page-title">Professional Profile</h2>
       <div>
         <h3 className="my-4 pt-4">Professional Experience</h3>
         <ul>
@@ -93,40 +95,19 @@ export const ProfessionalPage = () => {
         </ul>
       </div>
       <div>
-        <h3 className="mt-4 mb-1 pt-4">Skills and Expertise</h3>
+        <h3 className="my-4 pt-4">Skills and Expertise</h3>
+        <p>
+          🌱 I'm familiar with JavaScript, Typescript, React, Golang, and AWS{' '}
+        </p>
 
         <ul>
-          <li>
-            <b>Backend Technologies:</b> NodeJS, ExpressJS, Golang
-          </li>
-          <li>
-            <b>Frontend Technologies:</b> HTML, CSS, Bootstrap, JavaScript,
-            TypeScript
-          </li>
-          <li>
-            <b>Database:</b> MongoDB, MySQL
-          </li>
-          <li>
-            <b>API Types:</b> Rest API, ElasticSearch
-          </li>
-          <li>
-            <b>Testing Libraries:</b> Jest, React Testing Library (Unit
-            Testing), Cypress (Automation Testing)
-          </li>
-          <li>
-            <b>Testing Tools:</b> Postman (API testing), JMeter (Performance and
-            stress testing)
-          </li>
-          <li>
-            <b>AWS Services:</b> DynamoDB, DocumentDB, ElasticSearch,
-            CloudFormation, Lambdas, S3, ECS, CloudWatch, SQS, SNS
-          </li>
-          <li>
-            <b>Automation Workflow:</b> CI/CD pipelines using Github Action
-          </li>
-          <li>
-            <b>Monitoring and Logging Tools:</b> Newrelic, AWS CloudWatch
-          </li>
+          {skillsAndExperties.map((s, index) => {
+            return (
+              <li key={index}>
+                <b>{s.name}:</b> {s.skills.join(', ')}
+              </li>
+            )
+          })}
         </ul>
       </div>
       <div>

@@ -42,14 +42,14 @@ export const AboutPage = () => {
             <ul>
               <li>Software Engineering</li>
               <li>Software Testing</li>
-              <li>Web and Mobile Application</li>
+              <li>Artificial Intelligence</li>
             </ul>
           </div>
         </Col>
         <Col md={4} xs={12}>
           <img
             src={authorImage}
-            alt="Sabita Neupane Image"
+            alt="Sabita Neupane"
             width="300"
             className="author-image"
           />
