@@ -1,3 +1,7 @@
 export const NewsPage = () => {
-  return <h2>News Page</h2>
+  return (
+    <div id="news">
+      <h2>News Page</h2>
+    </div>
+  )
 }

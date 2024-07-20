@@ -1,76 +1,34 @@
+import { pageRoutesConfig } from '../../utils/routes'
 import FooterComponent from '../footer'
 import HeaderComponent from '../header'
-import { AboutPage } from '../../component/pages/about'
-import { AcademicPage } from '../../component/pages/academic'
-import { ProfessionalPage } from '../../component/pages/professional'
-import { TechCommunityPage } from '../../component/pages/tech-community'
-import { ContentPage } from '../../component/pages/content'
-import { NewsPage } from '../../component/pages/news'
+import { ContactPage } from '../pages/contact'
 
-export const pageSections = [
-  {
-    id: 'About Me',
-    path: '#about-me',
-    element: <AboutPage />,
-    featureFlag: true,
-  },
-  {
-    id: 'Academic',
-    path: '#academic',
-    element: <AcademicPage />,
-    featureFlag: true,
-  },
-  {
-    id: 'Professional',
-    path: '#professional',
-    element: <ProfessionalPage />,
-    featureFlag: true,
-  },
-  {
-    id: 'Tech Community',
-    path: '#tech-community',
-    element: <TechCommunityPage />,
-    featureFlag: true,
-  },
-  {
-    id: 'Content',
-    path: '',
-    element: <ContentPage />,
-    featureFlag: false,
-  },
-  {
-    id: 'News',
-    path: '',
-    element: <NewsPage />,
-    featureFlag: false,
-  },
-  {
-    id: 'Contact Me',
-    path: '#contact-me',
-    element: null,
-    featureFlag: true,
-  },
-]
-
-const AppComponent = () => {
+const AppComponent: React.FC = () => {
   return (
     <>
       <div className="header-container">
         <HeaderComponent />
       </div>
       <div className="body-container">
-        <div className="body-content">
-          {pageSections.map((page: any) => {
-            if (!page.featureFlag) {
-              return
-            }
-            return <div key={page.path}>{page.element}</div>
-          })}
+        <div>
+          {pageRoutesConfig
+            .filter((page) => page.featureFlag && page.element)
+            .map((page) => {
+              const PageComponent: any = page.element
+              return (
+                <div
+                  key={page.path || page.id}
+                  className={
+                    PageComponent === ContactPage ? 'mt-4 pt-4' : `body-content`
+                  }
+                >
+                  <PageComponent />
+                </div>
+              )
+            })}
         </div>
       </div>
-      <div className="footer-container">
-        <FooterComponent />
-      </div>
+      <FooterComponent />
     </>
   )
 }

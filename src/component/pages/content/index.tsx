@@ -1,3 +1,7 @@
 export const ContentPage = () => {
-  return <h2>Content Page</h2>
+  return (
+    <div id="content">
+      <h2>Content Page</h2>
+    </div>
+  )
 }

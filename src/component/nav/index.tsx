@@ -1,10 +1,10 @@
 import { Nav } from 'react-bootstrap'
-import { pageSections } from '../app'
+import { pageRoutesConfig } from '../../utils/routes'
 
 const NavComponent = () => {
   return (
     <Nav>
-      {pageSections.map((m: any) => {
+      {pageRoutesConfig.map((m: any) => {
         if (!m.featureFlag) {
           return
         }

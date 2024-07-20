@@ -7,20 +7,26 @@
   margin: auto;
   display: flex;
   min-width: 320px;
-  padding: 100px 200px 20px 200px;
+  padding-top: 20px;
 }
 
-.footer-container {
-  .footer-content {
-    text-align: center;
-    background-color: #f8f9fa;
+.body-content {
+  padding: 30px 200px 0px 200px;
+}
 
-    .copyright-info-content {
-      p {
-        font-size: 12px;
-      }
-    }
-  }
+.footer-content {
+  text-align: center;
+  background-color: #f8f9fa;
+}
+
+.footer-content .copyright-info-content p {
+  font-size: 12px;
+}
+
+.contact-content {
+  width: 100%;
+  text-align: center;
+  background-color: #f8f9fa;
 }
 
 .logo-image {
@@ -34,32 +40,43 @@
 .page-title {
   text-align: center;
   color: #226d93;
-  // margin: 50px 0px 30px;
   border-bottom: 1px solid #efefef;
 }
 
-@media (max-width: 991px) {
-  .body-container {
-    padding: 80px 30px 20px 30px;
-  }
-  .author-image {
-    padding: 20px;
-  }
-}
-
-@media (max-width: 575px) {
-  .body-container {
-    padding: 100px 20px 10px 20px;
-  }
-  .author-image {
-    padding: 20px;
-  }
-}
-
+/* Section heights */
 #about-me,
 #academic,
 #professional,
 #tech-community,
 #contact-me {
   height: 80px;
+}
+
+/* Media Queries */
+
+/* Desktop view (default) */
+@media (min-width: 992px) {
+  .body-content {
+    padding: 30px 200px 0px 200px;
+  }
+}
+
+/* Tablet view */
+@media (max-width: 991px) {
+  .body-content {
+    padding: 30px 20px 0px 20px;
+  }
+  .author-image {
+    padding: 20px;
+  }
+}
+
+/* Mobile view */
+@media (max-width: 575px) {
+  .body-content {
+    padding: 20px;
+  }
+  .author-image {
+    padding: 10px;
+  }
 }
