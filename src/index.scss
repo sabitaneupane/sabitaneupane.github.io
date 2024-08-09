@@ -7,51 +7,61 @@
   margin: auto;
   display: flex;
   min-width: 320px;
-  padding: 100px 200px 20px 200px;
+  padding-top: 20px;
 }
 
-.footer-container {
-  .footer-content {
-    text-align: center;
-    background-color: #f8f9fa;
+.footer-content {
+  text-align: center;
+  background-color: #f8f9fa;
 
-    .copyright-info-content {
-      p {
-        font-size: 12px;
-      }
-    }
+  .copyright-info-content p {
+    font-size: 12px;
   }
 }
 
+.contact-content {
+  width: 100%;
+  text-align: center;
+  background-color: #f8f9fa;
+}
 
-.logo-image{
+.logo-image {
   margin-top: -3px;
 }
 
-.author-image{
+.author-image {
   text-align: center;
 }
 
-.page-title{
+.page-title {
   text-align: center;
-  color: #226D93;
-  margin: 30px 0px 50px;
+  color: #226d93;
+  border-bottom: 1px solid #efefef;
 }
 
+/* Desktop view (default) */
+@media (min-width: 992px) {
+  .body-content {
+    padding: 100px 200px;
+  }
+}
+
+/* Tablet view */
 @media (max-width: 991px) {
-  .body-container {
-    padding: 80px 30px 20px 30px;
+  .body-content {
+    padding: 100px 20px;
   }
-  .author-image{
+  .author-image {
     padding: 20px;
   }
 }
 
+/* Mobile view */
 @media (max-width: 575px) {
-  .body-container {
-    padding: 100px 20px 10px 20px;
+  .body-content {
+    padding: 100px 20px;
   }
-  .author-image{
-    padding: 20px;
+  .author-image {
+    padding: 10px;
   }
 }

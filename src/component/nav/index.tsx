@@ -4,9 +4,9 @@ import { menuLinks } from '../../router'
 const NavComponent = () => {
   return (
     <Nav>
-      {menuLinks.map((m: any, index: number) => {
+      {menuLinks.map((m: any) => {
         return (
-          <NavLink className="px-3" href={m.path} key={index}>
+          <NavLink className="px-3" href={m.path} key={m.path}>
             {m.id}
           </NavLink>
         )
