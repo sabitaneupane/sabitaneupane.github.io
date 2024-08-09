@@ -6,7 +6,7 @@ const NavComponent = () => {
     <Nav>
       {menuLinks.map((m: any) => {
         return (
-          <NavLink className="px-3" href={m.path} key={m.path}>
+          <NavLink className="px-3" href={m.link} key={m.path}>
             {m.id}
           </NavLink>
         )
