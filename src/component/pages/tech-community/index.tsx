@@ -3,7 +3,7 @@ export const TechCommunityPage = () => {
     <div>
       <h2 className="page-title">Tech Community Profile</h2>
       <div>
-        <h3 className="my-4 pt-4">Volunteer Experience</h3>
+        <h3 className="my-4 pt-4">Volunteering Experience</h3>
         <div>
           <ul>
             <li>
@@ -60,7 +60,7 @@ export const TechCommunityPage = () => {
         </ul>
       </div>
       <div>
-        <h3 className="my-4 pt-4">Mentorship Experience</h3>
+        <h3 className="my-4 pt-4">Mentoring Experience</h3>
         <div>
           <ul>
             <li>
