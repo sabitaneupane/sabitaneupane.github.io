@@ -1,5 +1,6 @@
 import { useEffect } from 'react'
 import { scrollPageToTopOnHashChange } from '../../../utils'
+import FeaturedInComponent from '../../featuredIn'
 
 export const TechCommunityPage = () => {
   useEffect(() => {
@@ -127,6 +128,9 @@ export const TechCommunityPage = () => {
             </li>
           </ul>
         </div>
+      </div>
+      <div>
+        <FeaturedInComponent />
       </div>
     </div>
   )
