@@ -1,14 +1,27 @@
-import { socialMediaInfo } from '../../utils/socialMediaList'
+import {
+  socialMediaInfo,
+  socialMediaStaticInfo,
+} from '../../constant/socialMediaList'
 
 const ContactComponent = () => {
   const socialMediaContent = () => {
-    return socialMediaInfo.map((sm: any) => {
-      if (!sm.featureFlag) {
-        return
+    return Object.keys(socialMediaInfo).map((key) => {
+      const socialInfo = socialMediaInfo[key]
+      const image = socialMediaStaticInfo[key]
+
+      if (!socialInfo.featureFlag) {
+        return null
       }
+
       return (
-        <a href={sm.url} target="_blank" className="px-1 py-2" key={sm.name}>
-          <img src={sm.image} alt={sm.name} />
+        <a
+          href={socialInfo.url}
+          target="_blank"
+          rel="noopener noreferrer"
+          className="px-1 py-2"
+          key={key}
+        >
+          <img src={image} alt={key} />
         </a>
       )
     })
@@ -17,7 +30,6 @@ const ContactComponent = () => {
   return (
     <div className="contact-content">
       <div id="contact-me" className="social-media-content py-4">
-        {' '}
         {socialMediaContent()}
       </div>
     </div>

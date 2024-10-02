@@ -3,6 +3,7 @@ import { AcademicPage } from '../component/pages/academic'
 import { ProfessionalPage } from '../component/pages/professional'
 import { TechCommunityPage } from '../component/pages/tech-community'
 import { RouterProvider, createHashRouter } from 'react-router-dom'
+import { socialMediaInfo } from '../constant/socialMediaList'
 
 export const menuLinks = [
   {
@@ -30,6 +31,15 @@ export const menuLinks = [
     element: <TechCommunityPage />,
   },
 ]
+
+if (socialMediaInfo.medium.featureFlag) {
+  menuLinks.push({
+    id: 'Blogs',
+    path: '/blogs',
+    link: socialMediaInfo.medium.url,
+    element: <div>Redirecting to Blogs...</div>,
+  })
+}
 
 const router = createHashRouter(menuLinks)
 

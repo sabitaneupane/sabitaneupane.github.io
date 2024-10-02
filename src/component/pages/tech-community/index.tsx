@@ -1,4 +1,11 @@
+import { useEffect } from 'react'
+import { scrollPageToTopOnHashChange } from '../../../utils'
+
 export const TechCommunityPage = () => {
+  useEffect(() => {
+    scrollPageToTopOnHashChange()
+  }, [])
+
   return (
     <div>
       <h2 className="page-title">Tech Community Profile</h2>

@@ -1,10 +1,16 @@
 import authorImage from '../../../assets/sabitaneupane-image.png'
 import Row from 'react-bootstrap/Row'
 import Col from 'react-bootstrap/Col'
-import { researchInterest } from '../../../utils/researchInterest'
-import { siteInfo } from '../../../utils'
+import { researchInterest } from '../../../constant/researchInterest'
+import { siteInfo } from '../../../constant'
+import { scrollPageToTopOnHashChange } from '../../../utils'
+import { useEffect } from 'react'
 
 export const AboutPage = () => {
+  useEffect(() => {
+    scrollPageToTopOnHashChange()
+  }, [])
+
   const calculateWorkExperience = () => {
     const careerStartYear = 2018
     const currentYear = new Date().getFullYear()

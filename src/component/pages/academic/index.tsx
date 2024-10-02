@@ -1,8 +1,15 @@
+import { useEffect } from 'react'
+import { scrollPageToTopOnHashChange } from '../../../utils'
+
 export const AcademicPage = () => {
+  useEffect(() => {
+    scrollPageToTopOnHashChange()
+  }, [])
+
   return (
     <div>
       <h2 className="page-title">Academic Profile</h2>
- 
+
       <div>
         <h3 className="my-4 pt-4">Education</h3>
         <ul>

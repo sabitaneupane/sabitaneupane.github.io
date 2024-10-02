@@ -1,4 +1,4 @@
-import { siteInfo } from '../../utils'
+import { siteInfo } from '../../constant'
 
 const FooterComponent = () => {
   return (

@@ -1,6 +1,5 @@
 export const researchInterest = [
   'Software Engineering and Testing',
-  'Programming Languages',
-  'Artificial Intelligence',
+  'Software Quality and Reliability',
   'Large Language Models',
 ]
