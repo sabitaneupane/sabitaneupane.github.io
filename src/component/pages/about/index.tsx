@@ -19,10 +19,10 @@ export const AboutPage = () => {
         <Row>
           <Col md={8} xs={12}>
             <div>
-              👋 Hi, I'm Sabita Neupane, a Software Engineer from Nepal, with{' '}
-              {calculateWorkExperience()}+ years of experience. I specialized in
-              building robust and scalable web applications. I mostly work with
-              JavaScript, React, Typescript, AWS, and Golang.
+              👋 Hi, I'm {siteInfo.authorName}, a {siteInfo.currentWorkPosition}{' '}
+              from Nepal, with {calculateWorkExperience()}+ years of experience.
+              I specialized in building robust and scalable web applications. I
+              mostly work with JavaScript, React, Typescript, AWS, and Golang.
               <br />
               <br />
               With a Bachelor's degree in Computer Science and Information
