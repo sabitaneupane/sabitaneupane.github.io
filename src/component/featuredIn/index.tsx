@@ -5,13 +5,12 @@ import empoweringGirlsImage from '../../assets/featuredIn/Empowering Rural Girls
 import myStoryImage from '../../assets/featuredIn/My story of starting Butwal Coder Girls_ Sabita Neupane.png'
 import ictCareerImage from '../../assets/featuredIn/Why ICT Career For Girls _ Sabita Neupane.png'
 import { siteInfo } from '../../constant'
+import { featureFlags } from '../../utils/featureflags'
 
 export const featuredIn = [empoweringGirlsImage, myStoryImage, ictCareerImage]
 
-const showFeaturedIn = true
-
 const FeaturedInComponent = () => {
-  if (!showFeaturedIn) {
+  if (!featureFlags.showFeaturedIn) {
     return null
   }
   return (

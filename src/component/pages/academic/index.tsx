@@ -1,10 +1,32 @@
 import { useEffect } from 'react'
 import { scrollPageToTopOnHashChange } from '../../../utils'
+import { academicProfile } from '../../../constant/academicProfile'
+import { researchInterest } from '../../../constant/researchInterest'
+import { featureFlags } from '../../../utils/featureflags'
 
 export const AcademicPage = () => {
   useEffect(() => {
     scrollPageToTopOnHashChange()
   }, [])
+
+  const getAdditionalContent = (edu: any) => {
+    if (edu.additional_info.length === 0) {
+      return null
+    }
+
+    return edu.additional_info.map((info: any) => {
+      return (
+        <li key={info.title} className="mt-2">
+          <b>{info.title}</b>
+          <ul>
+            {info.description.map((desc: any) => (
+              <li key={`${info.title}-${desc}`}>{desc}</li>
+            ))}
+          </ul>
+        </li>
+      )
+    })
+  }
 
   return (
     <div>
@@ -12,42 +34,37 @@ export const AcademicPage = () => {
 
       <div>
         <h3 className="my-4 pt-4">Education</h3>
-        <ul>
-          <li>
-            <b>BSc. CSIT (Computer Science and Information Technology)</b>
-          </li>
-          <ul>
-            <li>2013 - 2017</li>
-            <li>Butwal Multiple Campus, Tribhuvan University, Nepal</li>
-          </ul>
-        </ul>
+
+        {academicProfile.map((edu: any) => (
+          <div key={edu.degree}>
+            <b>{edu.degree}</b>
+            <ul>
+              <li>
+                {edu.years}, {edu.institution}
+              </li>
+
+              {getAdditionalContent(edu)}
+            </ul>
+          </div>
+        ))}
       </div>
 
       <div>
-        <h3 className="my-4 pt-4">Final Year Project</h3>
-        <ul>
-          <li>
-            <b>DigitalDOTS-An ICT initiative for treatment of Tuberculosis</b>
-          </li>
-          <ul>
-            <li>
-              supervised by Assistant Professor Kamal Thapa, Butwal Multiple
-              Campus
-            </li>
-            <li>
-              guided by Dr. Satya Raj Shakya, Lumbini Zonal Hospital, Nepal.
-            </li>
-            <li>
-              a web and mobile application designed and programmed to deal with
-              treatment and medication processes for Tuberculosis patients.
-            </li>
-            <li>
-              2nd runner-up for DigitalDOTS in the “Project Demonstration”
-              program conducted by “Computer Association of Nepal (CAN)-
-              Rupandehi”, Nepal
-            </li>
-          </ul>
-        </ul>
+        <h4 className="my-4 pt-4">Research Interest</h4>
+        <ul></ul>
+
+        {researchInterest.map((e: any) => {
+          {
+            return featureFlags.showResearchInterestDescription ? (
+              <>
+                <h5> {e.topic} </h5>
+                <p> {e.description} </p>
+              </>
+            ) : (
+              <li>{e.topic}</li>
+            )
+          }
+        })}
       </div>
     </div>
   )
