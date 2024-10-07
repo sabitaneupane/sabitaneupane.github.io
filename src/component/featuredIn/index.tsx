@@ -8,7 +8,7 @@ import { siteInfo } from '../../constant'
 
 export const featuredIn = [empoweringGirlsImage, myStoryImage, ictCareerImage]
 
-const showFeaturedIn = false
+const showFeaturedIn = true
 
 const FeaturedInComponent = () => {
   if (!showFeaturedIn) {

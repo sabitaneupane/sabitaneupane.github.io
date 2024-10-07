@@ -3,7 +3,12 @@ export const experienceData = [
     position: 'Sr. Software Engineer',
     duration: 'July 2024 - Present',
     company: 'CloudFactory (Sprout Technology Service Pvt. Ltd), Nepal',
-    responsibilities: [],
+    responsibilities: [
+      'Developed and deployed a cloud-based AI labeling and workforce management platform with a microservice architecture, supporting millions of users while enhancing efficiency and user experience.',
+      'Managed timely updates for project dependencies and monitored system performance to ensure alignment with the latest technologies, promptly resolving any issues to maintain reliability.',
+      'Created features for onboarding workers, managing contracts, handling work availability, and matching workers with job requirements.',
+      'Established end-to-end testing using Cypress and Cucumber, which increased test coverage and reduced reliance on manual testing.',
+    ],
   },
   {
     position: 'Software Engineer',
