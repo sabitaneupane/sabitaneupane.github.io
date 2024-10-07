@@ -1,4 +1,12 @@
+import { useEffect } from 'react'
+import { scrollPageToTopOnHashChange } from '../../../utils'
+import FeaturedInComponent from '../../featuredIn'
+
 export const TechCommunityPage = () => {
+  useEffect(() => {
+    scrollPageToTopOnHashChange()
+  }, [])
+
   return (
     <div>
       <h2 className="page-title">Tech Community Profile</h2>
@@ -120,6 +128,9 @@ export const TechCommunityPage = () => {
             </li>
           </ul>
         </div>
+      </div>
+      <div>
+        <FeaturedInComponent />
       </div>
     </div>
   )

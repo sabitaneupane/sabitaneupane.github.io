@@ -1,7 +1,13 @@
-import { skillsAndExpertise } from '../../../utils/skills'
-import { experienceData } from '../../../utils/workExperience'
+import { useEffect } from 'react'
+import { skillsAndExpertise } from '../../../constant/skills'
+import { experienceData } from '../../../constant/workExperience'
+import { scrollPageToTopOnHashChange } from '../../../utils'
 
 export const ProfessionalPage = () => {
+  useEffect(() => {
+    scrollPageToTopOnHashChange()
+  }, [])
+
   return (
     <div>
       <h2 className="page-title">Professional Profile</h2>

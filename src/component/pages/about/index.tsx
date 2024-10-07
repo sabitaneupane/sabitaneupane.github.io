@@ -1,10 +1,14 @@
+import { useEffect } from 'react'
+import { Row, Col } from 'react-bootstrap'
+import { siteInfo } from '../../../constant'
+import { scrollPageToTopOnHashChange } from '../../../utils'
 import authorImage from '../../../assets/sabitaneupane-image.png'
-import Row from 'react-bootstrap/Row'
-import Col from 'react-bootstrap/Col'
-import { researchInterest } from '../../../utils/researchInterest'
-import { siteInfo } from '../../../utils'
 
 export const AboutPage = () => {
+  useEffect(() => {
+    scrollPageToTopOnHashChange()
+  }, [])
+
   const calculateWorkExperience = () => {
     const careerStartYear = 2018
     const currentYear = new Date().getFullYear()
@@ -20,32 +24,18 @@ export const AboutPage = () => {
           <Col md={8} xs={12}>
             <div>
               👋 Hi, I'm {siteInfo.authorName}, a {siteInfo.currentWorkPosition}{' '}
-              from Nepal, with {calculateWorkExperience()}+ years of experience.
-              I specialized in building robust and scalable web applications. I
-              mostly work with JavaScript, React, Typescript, AWS, and Golang.
+              from Nepal with {calculateWorkExperience()}+ years of experience
+              specializing in building robust and scalable web applications. I
+              primarily work with JavaScript, React, TypeScript, AWS, and
+              Golang.
               <br />
               <br />
-              With a Bachelor's degree in Computer Science and Information
-              Technology from Butwal Multiple Campus, Tribhuvan University, she
-              graduated with distinction, showcasing her dedication and
-              expertise in the field.
-              <br />
-              <br />
-              Additionally, I am also actively involved in Tech Communities with
-              the mission to inspire and encourage young minds. And during my
-              Bachelor's degree, I also founded an organization "Butwal Coder
-              Girls" with a mission to inspire and encourage young girls to take
-              an interest in the IT sector and also to accelerate the growth of
-              innovative girls entering the tech industry.
-            </div>
-
-            <div>
-              <h4 className="my-4 pt-4">Research Interest</h4>
-              <ul>
-                {researchInterest.map((e) => {
-                  return <li key={e}>{e}</li>
-                })}
-              </ul>
+              In addition to my technical career, I am actively involved in tech
+              communities with a mission to inspire and encourage young minds.
+              During my Bachelor's degree, I founded "Butwal Coder Girls," an
+              organization dedicated to empowering young girls to pursue careers
+              in technology and fostering the growth of innovative women
+              entering the tech industry.
             </div>
           </Col>
           <Col md={4} xs={12}>

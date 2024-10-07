@@ -1,5 +1,5 @@
 import { Container, Nav, Navbar } from 'react-bootstrap'
-import { siteInfo } from '../../utils'
+import { siteInfo } from '../../constant'
 import NavComponent from '../nav'
 import logo from '../../assets/sabitaneupane-logo.png'
 
@@ -14,27 +14,25 @@ const HeaderComponent = () => {
   }
 
   return (
-    <>
-      <Navbar
-        collapseOnSelect
-        expand="lg"
-        className="bg-body-tertiary page-navbar p-3"
-      >
-        <Container>
-          <Navbar.Brand href="/">
-            <img
-              src={logo}
-              alt="Sabita Neupane Logo"
-              width="26"
-              className="mx-1 logo-image"
-            />
-            <span className="mt-1">{siteInfo.authorName}</span>
-          </Navbar.Brand>
-          <Navbar.Toggle aria-controls="responsive-navbar-nav" />
-          {collapsibleNavbar()}
-        </Container>
-      </Navbar>
-    </>
+    <Navbar
+      collapseOnSelect
+      expand="lg"
+      className="bg-body-tertiary page-navbar p-3"
+    >
+      <Container>
+        <Navbar.Brand href="/">
+          <img
+            src={logo}
+            alt={`${siteInfo.authorName} Logo`}
+            width="26"
+            className="mx-1 logo-image"
+          />
+          <span className="mt-1">{siteInfo.authorName}</span>
+        </Navbar.Brand>
+        <Navbar.Toggle aria-controls="responsive-navbar-nav" />
+        {collapsibleNavbar()}
+      </Container>
+    </Navbar>
   )
 }
 
