@@ -59,7 +59,7 @@ export const ResearchComponentPage = () => {
               <iframe
                 src={`${paper.paper}#toolbar=0`}
                 width="100%"
-                height="512"
+                height="800"
                 title={paper.title}
               ></iframe>
             </li>
