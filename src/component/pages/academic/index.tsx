@@ -1,8 +1,6 @@
 import { useEffect } from 'react'
 import { scrollPageToTopOnHashChange } from '../../../utils'
 import { academicProfile } from '../../../constant/academicProfile'
-import { researchInterest } from '../../../constant/researchInterest'
-import { featureFlags } from '../../../utils/featureflags'
 
 export const AcademicPage = () => {
   useEffect(() => {
