@@ -4,6 +4,7 @@ import { ProfessionalPage } from '../component/pages/professional'
 import { TechCommunityPage } from '../component/pages/tech-community'
 import { RouterProvider, createHashRouter } from 'react-router-dom'
 import { socialMediaInfo } from '../constant/socialMediaList'
+import { ResearchComponentPage } from '../component/pages/research'
 
 export const menuLinks = [
   {
@@ -29,6 +30,12 @@ export const menuLinks = [
     path: '/tech-community',
     link: '/#tech-community',
     element: <TechCommunityPage />,
+  },
+  {
+    id: 'Research',
+    path: '/research',
+    link: '/#research',
+    element: <ResearchComponentPage />,
   },
 ]
 

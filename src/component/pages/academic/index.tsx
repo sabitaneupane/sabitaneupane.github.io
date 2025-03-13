@@ -1,8 +1,6 @@
 import { useEffect } from 'react'
 import { scrollPageToTopOnHashChange } from '../../../utils'
 import { academicProfile } from '../../../constant/academicProfile'
-import { researchInterest } from '../../../constant/researchInterest'
-import { featureFlags } from '../../../utils/featureflags'
 
 export const AcademicPage = () => {
   useEffect(() => {
@@ -30,6 +28,7 @@ export const AcademicPage = () => {
 
   return (
     <div>
+
       <h2 className="page-title">Academic Profile</h2>
 
       <div>
@@ -47,24 +46,6 @@ export const AcademicPage = () => {
             </ul>
           </div>
         ))}
-      </div>
-
-      <div>
-        <h4 className="my-4 pt-4">Research Interest</h4>
-        <ul></ul>
-
-        {researchInterest.map((e: any) => {
-          {
-            return featureFlags.showResearchInterestDescription ? (
-              <>
-                <h5> {e.topic} </h5>
-                <p> {e.description} </p>
-              </>
-            ) : (
-              <li>{e.topic}</li>
-            )
-          }
-        })}
       </div>
     </div>
   )
